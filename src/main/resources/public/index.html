@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Instructions for building and running  Spring Boot application in Docker by Priyanka-M21AIE244</h1>
+        <p>Here are the steps to create a Docker image for your Spring Boot project and run it:</p>
+        <ol>
+            <li>Create a Dockerfile in the root directory of your project with the following content:</li>
+        </ol>
+        <code>
+            #define base docker image
+        </code>
+        <code>
+			FROM openjdk:11
+		</code>
+        <code>
+			LABEL maintainer ="Priyanka Srivastava"
+		</code>
+        <code>
+			ADD target/springboot-docker-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar
+		</code>
+        <code>
+			ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]
+        </code>
+        <ol start="2">
+            <li>Build the Docker image by running the following command in the terminal:</li>
+            <li>open the terminal where the docker file is present</li>
+        </ol>
+        <code>
+            docker build -t springboot-docker-demo:latest .
+        </code>
+        <ol start="3">
+            <li>Run the Docker container with the following command:</li>
+        </ol>
+        <code>
+            docker run -p 8081:8080 springboot-docker-demo
+        </code>
+        <p>Your Spring Boot application should now be accessible at <a href="http://localhost:8080">http://localhost:8081</a>.</p>
+        <p>Remember to stop the container and remove it when you're done:</p>
+        <code>
+            docker stop container-id
+        </code>
+        <code>
+            docker rm container-id
+        </code>
+        <p>If needed, you can remove the Docker image:</p>
+        <code>
+            docker rmi springboot-docker-demo:latest
+        </code>
+    </div>
+</body>
+</html>
