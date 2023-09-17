@@ -1,6 +1,6 @@
 # V-CloudComputing-Repo
 
-Instructions for building and running Spring Boot application in Docker by Priyanka-M21AIE244
+Instructions for building and running Spring Boot application in Docker by Priyanka Srivastava -M21AIE244
 
 Here are the steps to create a Docker image for your Spring Boot project and run it:
 
