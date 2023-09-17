@@ -2,7 +2,7 @@
 
 Instructions for building and running Spring Boot application in Docker by Priyanka Srivastava -M21AIE244
 
-Here are the steps to create a Docker image for your Spring Boot project and run it:
+Here are the steps to create a Docker image for the Spring Boot project and run it:
 
 Create a Dockerfile in the root directory of your project with the following content:
 
